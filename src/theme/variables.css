@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ion-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  
+  /* Primary Off-white theme backgrounds */
+  --ion-background-color: #f3f4f6;
+  --ion-background-color-rgb: 243, 244, 246;
+  
+  --ion-text-color: #1f2937;
+  --ion-text-color-rgb: 31, 41, 55;
+
+  /* Custom palette colors */
+  --color-primary: #5550df;
+  --color-primary-rgb: 85, 80, 223;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-gray-light: #f9fafb;
+  --color-gray-border: #e5e7eb;
+  --color-text-secondary: #6b7280;
+
+  /* Ionic Overrides for our clean minimalist design */
+  --ion-color-primary: #5550df;
+  --ion-color-primary-rgb: 85, 80, 223;
+  --ion-color-success: #10b981;
+  --ion-color-danger: #ef4444;
+
+  /* Toolbar styling */
+  --ion-toolbar-background: #f3f4f6;
+  --ion-toolbar-text-color: #1f2937;
+  --ion-toolbar-border-color: transparent;
+}
+
+/* Custom design utilities */
+.finflow-card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+  padding: 20px;
+  margin: 16px;
+}
+
+.finflow-card-compact {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+  padding: 16px;
+}
+
+/* Scroll Hide Rules */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom Floating Tab Bar css classes */
+.floating-tab-container {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 380px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+  z-index: 1000;
+  border: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+.floating-tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.floating-tab-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5550df;
+  border-radius: 22px;
+  padding: 10px 22px;
+  color: #ffffff;
+  animation: pillPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-tab-icon-inactive {
+  color: #9ca3af;
+  font-size: 24px;
+  transition: color 0.2s ease;
+}
+
+.floating-tab-icon-inactive:hover {
+  color: #4b5563;
+}
+
+@keyframes pillPop {
+  0% {
+    transform: scale(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Center and constrain layout to look like a mobile device frame on desktop/laptop screens */
+@media (min-width: 576px) {
+  body {
+    background-color: #0e0f12 !important; /* Premium dark backdrop behind the phone container */
+  }
+
+  ion-app {
+    background-color: #0e0f12 !important;
+  }
+  
+  #main-content {
+    max-width: 480px;
+    margin: 0 auto;
+    left: 50% !important;
+    right: auto !important;
+    width: 100% !important;
+    transform: translateX(-50%);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
+    border-left: 1px solid rgba(229, 231, 235, 0.5);
+    border-right: 1px solid rgba(229, 231, 235, 0.5);
+    background-color: #f3f4f6;
+  }
+
+  .floating-tab-container {
+    width: 420px !important;
+    bottom: 24px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Make modal width match the mobile layout container width on desktop */
+  .add-tx-modal {
+    --width: 480px;
+    --height: 80%;
+    margin: 0 auto;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}
+

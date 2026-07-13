@@ -1,0 +1,971 @@
+/* Desktop Dashboard Styles */
+
+.desktop-dashboard-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #1f2937;
+}
+
+/* 1. Header Banner Panel (Dark Mode Theme) */
+.desktop-banner {
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  border-radius: 28px;
+  padding: 32px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.banner-date {
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.banner-welcome {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  border-radius: 14px;
+  width: fit-content;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item.active {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Banner Right Widget Area */
+.banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  width: 320px;
+}
+
+.banner-top-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-notify {
+  font-size: 20px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.profile-badge-desktop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-badge-desktop img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Monthly Budget Widget (inside black header) */
+.monthly-budget-widget {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 16px;
+  width: 100%;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.widget-header h5 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.widget-header p {
+  margin: 2px 0 0 0;
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.widget-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.widget-progress-info {
+  font-size: 11px;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.widget-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  background: #a855f7; /* purple accent bar */
+  height: 100%;
+  border-radius: 3px;
+}
+
+.widget-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* 2. Grid Columns */
+.desktop-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 1.1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.col-span-2 {
+  /* Grid handles sizing by ratio grid-template-columns */
+}
+
+/* Card layout */
+.desktop-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f1f5f9;
+}
+
+.desktop-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.card-header-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.card-header-desktop h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.card-header-desktop p {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.card-menu-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card-balance-body {
+  margin-bottom: 20px;
+}
+
+.card-balance-body h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px 0;
+}
+
+.balance-delta-badge {
+  background: #10b98115;
+  color: #059669;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Vertical grouping of horizontal progress bar meters */
+.progress-bars-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.progress-bar-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.bar-track {
+  background: #f3f4f6;
+  height: 6px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.bar-fill-income {
+  background: #5550df;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.bar-fill-outcome {
+  background: #10b981;
+  height: 100%;
+  border-radius: 3px;
+}
+
+/* AI Recommendation banner */
+.smart-rec-banner {
+  background: #5550df0a;
+  border-radius: 16px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.rec-icon {
+  background: #5550df15;
+  color: #5550df;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.rec-text h5 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.rec-text p {
+  margin: 2px 0 0 0;
+  font-size: 10px;
+  color: #6b7280;
+  line-height: 1.35;
+}
+
+/* Quick Transfer desktop avatars */
+.contacts-desktop-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.contact-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.initials-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  border: 1.5px solid #ffffff;
+  text-align: center;
+}
+
+/* Billings grid */
+.billings-desktop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.billing-item-desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.billing-item-desktop span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.billing-item-desktop .icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.icon-wrap.u { background: #06b6d415; color: #06b6d4; }
+.icon-wrap.w { background: #3b82f615; color: #3b82f6; }
+.icon-wrap.s { background: #a855f715; color: #a855f7; }
+.icon-wrap.p { background: #ec489915; color: #ec4899; }
+
+/* Column 2: Settlement & Vertical chart */
+.settlement-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.settlement-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settlement-stat h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.delta-green {
+  font-size: 11px;
+  color: #059669;
+  font-weight: 700;
+}
+
+.settlement-chart {
+  display: flex;
+  align-items: flex-end;
+  height: 90px;
+  gap: 16px;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.chart-bar-container span {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.chart-bar {
+  width: 20px;
+  background: #f3f4f6;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+}
+
+.chart-bar:hover {
+  background: #e5e7eb;
+}
+
+.chart-bar.active {
+  background: #5550df;
+}
+
+/* Recent Transaction Table */
+.table-header {
+  margin-bottom: 20px;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.filter-btn {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #4b5563;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.table-search {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 6px 12px;
+  width: 220px;
+  gap: 8px;
+}
+
+.table-search ion-icon {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+.table-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  width: 100%;
+}
+
+/* Desktop Ledger Table Styles */
+.desktop-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 0.8fr;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-head {
+  border-bottom: 2px solid #f3f4f6;
+  color: #9ca3af;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tx-name-col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tx-name-col span {
+  font-weight: 700;
+  color: #111827;
+}
+
+.tx-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.badge-cat {
+  background: #f3f4f6;
+  color: #4b5563;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+.text-secondary {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.tx-amount.income { color: #10b981; }
+.tx-amount.expense { color: #ef4444; }
+
+.table-del-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.table-del-btn:hover {
+  background: #fee2e2;
+}
+
+/* Column 3: Payment Breakdown & SVG concentric gauge */
+.chart-breakdown-card {
+  padding-bottom: 12px;
+}
+
+.gauge-center-wrapper-desktop {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.center-value-desktop {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-value-desktop h5 {
+  margin: 0;
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.center-value-desktop h3 {
+  margin: 2px 0 0 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Sliders listing */
+.desktop-budget-adjusters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.desktop-adjuster-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.adjuster-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adjuster-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.adjuster-label .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.adjuster-label .cat-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #374151;
+}
+
+.ratio-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+}
+
+.adjuster-slider-row {
+  width: 100%;
+}
+
+.adjuster-slider-row input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  outline: none;
+}
+
+.adjuster-slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #5550df;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Add Record Overlay Modal on Desktop */
+.desktop-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.desktop-modal {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  border: 1px solid #f1f5f9;
+}
+
+.d-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 10px;
+}
+
+.d-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.close-d-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.d-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.d-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.d-form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4b5563;
+  text-transform: uppercase;
+}
+
+.d-form-group input, .d-form-group select {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  outline: none;
+  color: #1f2937;
+}
+
+.d-form-group input:focus, .d-form-group select:focus {
+  border-color: #5550df;
+}
+
+.d-toggle-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f3f4f6;
+  padding: 3px;
+  border-radius: 12px;
+}
+
+.d-toggle-type button {
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.d-toggle-type button.active.exp {
+  background: #ffffff;
+  color: #ef4444;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.d-toggle-type button.active.inc {
+  background: #ffffff;
+  color: #10b981;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.d-form-submit {
+  background: #5550df;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(85,80,223,0.2);
+}
+
+.d-form-submit:hover {
+  background: #443ebe;
+}
+
+/* Ensure the entire desktop container can scroll when content overflows */
+.desktop-dashboard-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Styles for Desktop tab sub-pages */
+.desktop-single-pane {
+  margin-top: 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+.desktop-grid-2-col {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.spent-stats-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-pill-item {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #ffffff;
+}
+
+.stat-pill-item.exp {
+  background: #ef444405;
+  border-color: #ef444415;
+}
+
+.stat-pill-item.inc {
+  background: #10b98105;
+  border-color: #10b98115;
+}
+
+.stat-pill-item span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-pill-item h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.stat-pill-item.exp h2 { color: #ef4444; }
+.stat-pill-item.inc h2 { color: #10b981; }
+
+.section-link-desktop {
+  background: transparent;
+  border: none;
+  color: #5550df;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  width: fit-content;
+}
+
+.section-link-desktop:hover {
+  text-decoration: underline;
+}
+
+/* Showcase Desktop profile & info styling */
+.showcase-desktop-icon {
+  background: #5550df15;
+  color: #5550df;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.showcase-header-desktop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #f3f4f6;
+  padding-bottom: 16px;
+}
+
+.showcase-detail-item {
+  display: flex;
+  gap: 16px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+}
+
+.showcase-detail-item ion-icon {
+  font-size: 20px;
+  color: #5550df;
+  margin-top: 2px;
+}
+
+.font-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

@@ -1,4 +1,4 @@
-# 💰 FinFlow: Responsive Personal Finance Tracker
+# 💰 Fintech: Responsive Personal Finance Tracker
 
 FinFlow is a premium, client-side personal finance tracker built using **React, TypeScript, and Ionic**. The application features an off-white Canvas design system inspired by **Apple Wallet** and **Stripe**, offering custom layouts tailored for both desktop and mobile screens.
 
